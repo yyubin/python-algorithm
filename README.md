@@ -8,6 +8,8 @@ https://www.acmicpc.net/
 https://leetcode.com/
 
 ### 20230205
-현재 백준, 솔브닥에서 실랜디 진행 중이에요
-
 -@$me lang:ko solved:3000.. *s5..s1
+
+### 20230213
+-@$me lang:ko solved:3000.. *s3..g4
+
