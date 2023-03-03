@@ -13,13 +13,17 @@ https://leetcode.com/
 ### 20230213
 -@$me lang:ko solved:3000.. *s3..g4
 
-### 20230219~
-약한 유형 문제풀이
-
-BFS 문제집 ing
-https://www.acmicpc.net/workbook/view/7313
-
 ### 20230227~
 -@$me lang:ko solved:3000.. *s2..g3
 
 
+## 문제집
+
+### 진행중
+BFS
+https://www.acmicpc.net/workbook/view/7313
+
+### 완료
+정렬 https://www.acmicpc.net/workbook/view/7317
+
+큐 https://www.acmicpc.net/workbook/view/7310
