@@ -30,6 +30,8 @@ DP
 https://www.acmicpc.net/workbook/view/7319
 
 ### 완료
-정렬 https://www.acmicpc.net/workbook/view/7317
+정렬 
+https://www.acmicpc.net/workbook/view/7317
 
-큐 https://www.acmicpc.net/workbook/view/7310
+큐 
+https://www.acmicpc.net/workbook/view/7310
