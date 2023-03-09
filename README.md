@@ -13,8 +13,11 @@ https://leetcode.com/
 ### 20230213
 -@$me lang:ko solved:3000.. *s3..g4
 
-### 20230227~
+### 20230227
 -@$me lang:ko solved:3000.. *s2..g3
+
+### 20230310~
+-@$me lang:ko solved:3000.. *s1..g2
 
 
 ## 문제집
