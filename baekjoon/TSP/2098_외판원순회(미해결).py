@@ -1,3 +1,27 @@
+import sys
+
+
+def tsp(idx, path):
+    if path == total:
+        return graph[idx][0] if graph[idx][0] > 0 else 20202020
+    if memo[idx][path] > 0:
+        return memo[idx][path]
+
+    tmp = 20202020
+    for i in range(1, n):
+        if (path >> i) % 2 == 1 or graph[idx][i] == 0:
+            continue
+        tmp = min(tmp, graph[idx][i] + tsp(i, path | (1 << i)))
+    memo[idx][path] = tmp
+    return tmp
+
+
+n = int(sys.stdin.readline())
+graph = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+memo = [[0] * (1 << n) for _ in range(n)]
+total = (1 << n) - 1
+print(tsp(0, 1))
+
 # dp 개새키
 # 시간 초과...
 # import sys
@@ -61,10 +85,10 @@
 # dp[0][0011] = dp[2][0111] + graph[0][2] 이다
 
 # 점화식
-#dp[cur][visited] = min(dp[cur][visited], dp[next][visited | (1 << next)] + graph[cur][next])
+# dp[cur][visited] = min(dp[cur][visited], dp[next][visited | (1 << next)] + graph[cur][next])
 
 
 # 비트마스킹
-#https://velog.io/@1998yuki0331/Python-%EB%B9%84%ED%8A%B8-%EB%A7%88%EC%8A%A4%ED%82%B9-%EC%A0%95%EB%A6%AC
+# https://velog.io/@1998yuki0331/Python-%EB%B9%84%ED%8A%B8-%EB%A7%88%EC%8A%A4%ED%82%B9-%EC%A0%95%EB%A6%AC
 # 참조
-#https://hongcoding.tistory.com/83
+# https://hongcoding.tistory.com/83
