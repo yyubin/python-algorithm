@@ -11,10 +11,20 @@
 #     res += string.count('u')
 #     print(res)
 #
-import sys
+# import sys
 
-while True:
-    a, b = map(int, input().split())
-    if a == 0 and b == 0:
-        break
-    print('Yes' if a > b else 'No')
+# while True:
+#     a, b = map(int, input().split())
+#     if a == 0 and b == 0:
+#         break
+#     print('Yes' if a > b else 'No')
+
+
+s = list(input())
+
+for i in s:
+    if i.isupper():
+        print(i.lower(), end="")
+    else:
+        print(i.upper(), end="")
+
