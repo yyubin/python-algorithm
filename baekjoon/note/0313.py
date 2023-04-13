@@ -20,11 +20,16 @@
 #     print('Yes' if a > b else 'No')
 
 
-s = list(input())
+# s = list(input())
+#
+# for i in s:
+#     if i.isupper():
+#         print(i.lower(), end="")
+#     else:
+#         print(i.upper(), end="")
 
-for i in s:
-    if i.isupper():
-        print(i.lower(), end="")
-    else:
-        print(i.upper(), end="")
+
+n, m = map(int, input().split())
+print(n//m)
+print(n%m)
 
