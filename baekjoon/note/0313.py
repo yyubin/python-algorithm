@@ -29,7 +29,17 @@
 #         print(i.upper(), end="")
 
 
-n, m = map(int, input().split())
-print(n//m)
-print(n%m)
+# n, m = map(int, input().split())
+# print(n//m)
+# print(n%m)
+#
 
+# a = int(input())
+# b = int(input())
+# print(a+b)
+# print(a-b)
+# print(a*b)
+
+print(".  .   .")
+print("|  | _ | _. _ ._ _  _")
+print("|/\|(/.|(_.(_)[ | )(/.")
