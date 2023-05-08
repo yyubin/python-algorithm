@@ -44,3 +44,6 @@ https://www.acmicpc.net/workbook/view/7317
 
 큐 
 https://www.acmicpc.net/workbook/view/7310
+
+덱
+https://www.acmicpc.net/workbook/view/7311
