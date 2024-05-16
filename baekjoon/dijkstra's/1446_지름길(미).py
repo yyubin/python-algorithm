@@ -1,13 +1,18 @@
 import heapq
 
-n, m = map(int, input().split())
+n, d = map(int, input().split())
 INF = int(1e9)
 
-graph = [[] for i in range(m + 1)]
-distance = [INF] * (m + 1)
+graph = [[] for _ in range(d+1)]
+distance = [INF] * (d+1)
+
+for i in range(d):
+    graph[i].append((i+1, 1))
 
 for _ in range(n):
     a, b, c = map(int, input().split())
+    if b > d:
+        continue
     graph[a].append((b, c))
 
 
@@ -30,5 +35,6 @@ def dijkstra(start):
                 heapq.heappush(q, (cost, i[0]))
 
 
+
 dijkstra(0)
-print(distance[m])
+print(distance[d])
