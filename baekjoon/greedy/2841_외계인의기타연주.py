@@ -1,9 +1,30 @@
 import sys
 n, p = map(int, sys.stdin.readline().split())
 res = 0
+hold = []
 
 for _ in range(n):
-    a, b =
+    a, b = map(int, sys.stdin.readline().split())
+
+    if (a, b) not in hold:
+        hold.append((a, b))
+        res += 1
+
+    tmp = []
+    tmp_cnt = 0
+
+    for mel, fret in hold:
+        if mel == a and fret > b:
+            tmp_cnt += 1
+        else:
+            tmp.append((mel, fret))
+
+    hold = tmp
+    res += tmp_cnt
+
+print(res)
+
+
 
 # 2 8
 # 2 10
