@@ -1,47 +1,47 @@
-import sys
-from collections import deque
-
-n, m = map(int, sys.stdin.readline().split())
-graph = [[] for _ in range(n+1)]
-start, end = 1e9, 0
-
-for _ in range(m):
-    a, b, c = map(int, sys.stdin.readline().split())
-    graph[a].append((b, c))
-    graph[b].append((a, c))
-    start = min(start, c)
-    end = max(end, c)
-
-a, b = map(int, sys.stdin.readline().split())
-
-def bfs(weight):
-    global a, b
-    q = deque()
-    q.append(a)
-    visited = [False] * (n+1)
-    visited[a] = True
-
-    while q:
-        now = q.popleft()
-        for i, w in graph[now]:
-            if not visited[i] and w >= weight:
-                visited[i] = True
-                q.append(i)
-
-    if visited[b]:
-        return True
-    else:
-        return False
-
-result = 0
-while start <= end:
-    mid = (start + end) // 2
-    if bfs(mid):
-        result = mid
-        start = mid + 1
-    else:
-        end = mid - 1
-print(result)
+# import sys
+# from collections import deque
+#
+# n, m = map(int, sys.stdin.readline().split())
+# graph = [[] for _ in range(n+1)]
+# start, end = 1e9, 0
+#
+# for _ in range(m):
+#     a, b, c = map(int, sys.stdin.readline().split())
+#     graph[a].append((b, c))
+#     graph[b].append((a, c))
+#     start = min(start, c)
+#     end = max(end, c)
+#
+# a, b = map(int, sys.stdin.readline().split())
+#
+# def bfs(weight):
+#     global a, b
+#     q = deque()
+#     q.append(a)
+#     visited = [False] * (n+1)
+#     visited[a] = True
+#
+#     while q:
+#         now = q.popleft()
+#         for i, w in graph[now]:
+#             if not visited[i] and w >= weight:
+#                 visited[i] = True
+#                 q.append(i)
+#
+#     if visited[b]:
+#         return True
+#     else:
+#         return False
+#
+# result = 0
+# while start <= end:
+#     mid = (start + end) // 2
+#     if bfs(mid):
+#         result = mid
+#         start = mid + 1
+#     else:
+#         end = mid - 1
+# print(result)
 
 # 이분탐색 + bfs
 # O(log w * (n + m))
@@ -50,6 +50,8 @@ print(result)
 
 
 # mst - 크루스칼
+import sys
+n, m = map(int, sys.stdin.readline().split())
 def find(x):
     if parent[x] != x:
         parent[x] = find(parent[x])
@@ -70,8 +72,8 @@ a, b = map(int, sys.stdin.readline().split())
 edges.sort(reverse=True)
 parent = [i for i in range(n+1)]
 
-for w, a, b in edges:
-    union(a, b)
+for w, u, v in edges:
+    union(u, v)
     if find(a) == find(b):
         print(w)
         break
@@ -99,3 +101,10 @@ for w, a, b in edges:
 # 2, 3 연결시 (1, 2, 3, 4, 5) 연결 -> 여기에서 간선 중 최소 무게가 3이므로 3
 
 # 가장 무거운 간들부터 연결하면서 a-b가 처음 연결되는 순간 그 시점의 간선이 최소값
+
+
+#### 병목 최대화, 최소 중 최대, 경로에 제약이 있는 경우
+# 모두 이분탐색, 크루스칼, 다익스트라 변형으로 풀 수 있음
+
+# 크루스칼 -> 연결, 네트워크, 제한 조건이 있는 경우 생각해보기
+# 유파 -> 집합 판별, a, b가 연결됨을 확인해야 할 경우 생각해보기
