@@ -21,4 +21,3 @@ while True:
         stack.append([i, li[i]])
     print(ret)
 
-# 요즘 빨리 플레가고 싶어서 세그먼트 트리 날먹중...ㅎ
